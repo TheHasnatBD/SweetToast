@@ -1,8 +1,10 @@
 package xyz.hasnat.sweettoastlibrary;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import xyz.hasnat.sweettoast.SweetToast;
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void info(View view) {
-        SweetToast.info(this, "Info type toast", 4000);
+        SweetToast.info(this, "Info type toast", 3000);
     }
 
     public void success(View view) {
@@ -31,13 +33,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void warning(View view) {
-        SweetToast.warning(this, "Warning type toast", 2000);
+        SweetToast.warning(this, "Warning type toast", 3000);
     }
 
     public void error(View view) {
-        SweetToast.error(this, "Error type toast", 1000);
+        SweetToast.error(this, "Error type toast", 3000);
     }
 
-    public void custom(View view) {
+    public void custom1(View view) {
+        SweetToast.custom(this, "Custom Text Toast", Color.WHITE, R.drawable.toast_bg2, 2000);
+    }
+
+    public void custom2(View view) {
+        SweetToast.custom(this, "Only Custom Icon in a Toast", R.drawable.ic_stars, 2000);
+    }
+
+    public void custom3(View view) {
+        SweetToast.custom(this, "It's a fully custom Toast", R.drawable.ic_android, Color.WHITE, R.drawable.toast_bg1, 2000);
     }
 }

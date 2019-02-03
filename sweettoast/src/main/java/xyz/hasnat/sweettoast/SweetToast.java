@@ -1,6 +1,7 @@
 package xyz.hasnat.sweettoast;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +32,7 @@ public class SweetToast {
     public static void success(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_success);
-        setToastText(string);
+        setToastText(string, Color.WHITE);
         setToastIcon(R.drawable.ic_done);
         toast = new Toast(context);
         toast.setView(myView);
@@ -44,7 +45,7 @@ public class SweetToast {
     public static void info(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_info);
-        setToastText(string);
+        setToastText(string, Color.WHITE);
         setToastIcon(R.drawable.ic_info);
         toast = new Toast(context);
         toast.setView(myView);
@@ -56,8 +57,8 @@ public class SweetToast {
     public static void warning(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_warning);
-        setToastText(string);
-        setToastIcon(R.drawable.ic_close);
+        setToastText(string, Color.WHITE);
+        setToastIcon(R.drawable.ic_info);
         toast = new Toast(context);
         toast.setView(myView);
         toast.show();
@@ -68,7 +69,7 @@ public class SweetToast {
     public static void error(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_error);
-        setToastText(string);
+        setToastText(string, Color.WHITE);
         setToastIcon(R.drawable.ic_close);
         toast = new Toast(context);
         toast.setView(myView);
@@ -78,8 +79,48 @@ public class SweetToast {
 
 
     /** Custom Toast For USER defined */
-    // without Icon
-    // with Icon
+    // without Icon >> dynamic text color and background color
+    public static void custom(Context context, String string, int textColor, int backgroundColor, int duration){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(backgroundColor);
+        setToastText(string, textColor);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.show();
+        waitingSec(duration);
+    }
+
+    // Only Icon >> in pre-defined background gray and txt Color BLACK
+    public static void custom(Context context, String string, int icon, int duration){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(R.drawable.round_shape);
+        setToastText(string, Color.BLACK);
+        setToastIcon(icon);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.show();
+        waitingSec(duration);
+    }
+
+    // text, icon, txtColor, bgColor, duration >> all
+    public static void custom(Context context, String string, int icon, int textColor, int backgroundColor, int duration){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(backgroundColor);
+        setToastText(string, textColor);
+        setToastIcon(icon);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.show();
+        waitingSec(duration);
+    }
+
+    /** SupperCustom Toast For fully USER customized */
+    public static Toast supperCustom(Context context, String string, int duration) {
+        toast = new Toast(context);
+        // not completed
+
+        return toast;
+    }
 
 
     // inflate for separate layout
@@ -92,16 +133,18 @@ public class SweetToast {
         LinearLayout layout = view.findViewById(R.id.toastLay);
         layout.setBackgroundResource(resId);
     }
-    private static void setToastText(String string) {
+    private static TextView setToastText(String string, int textColor) {
         TextView toastTitle = view.findViewById(R.id.toastTitle);
         toastTitle.setText(string);
+        toastTitle.setTextColor(textColor);
+        return toastTitle;
     }
     private static void setToastIcon(int resId) {
         ImageView toastIcon = view.findViewById(R.id.toastIcon);
         toastIcon.setImageResource(resId);
     }
 
-    // time handling for toast showing
+    // time handling for toast duration
     private static void waitingSec(int duration) {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
