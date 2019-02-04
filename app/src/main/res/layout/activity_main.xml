@@ -57,7 +57,6 @@
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             >
-
             <Button
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"

@@ -41,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void custom1(View view) {
-        SweetToast.custom(this, "Custom Text Toast", Color.WHITE, R.drawable.toast_bg2, 2000);
+        SweetToast.custom(this, "Custom Text Toast", Color.parseColor("#FFFFFF"), R.drawable.toast_bg2, 3000);
     }
 
     public void custom2(View view) {
-        SweetToast.custom(this, "Only Custom Icon in a Toast", R.drawable.ic_stars, 2000);
+        SweetToast.custom(this, "Only Custom Icon in a Toast", R.drawable.ic_stars, 3000);
     }
 
     public void custom3(View view) {
-        SweetToast.custom(this, "It's a fully custom Toast", R.drawable.ic_android, Color.WHITE, R.drawable.toast_bg1, 2000);
+        SweetToast.custom(this, "It's a fully custom Toast", R.drawable.ic_android, getResources().getColor(R.color.colorWhite), R.drawable.toast_bg1, 3000);
     }
 }

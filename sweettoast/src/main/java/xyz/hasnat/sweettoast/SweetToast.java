@@ -118,8 +118,12 @@ public class SweetToast {
     }
 
 
-    /** Custom Toast For USER defined */
-    // without Icon >> dynamic text color and background color
+
+    /** Custom Toast For USER defined
+     * starting CUSTOM
+     * */
+
+    /** without Icon >> dynamic text color and background color */
     public static void custom(Context context, String string, int textColor, int backgroundColor, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(backgroundColor);
@@ -132,7 +136,8 @@ public class SweetToast {
         waitingSec(duration);
     }
 
-    // Only Icon >> in pre-defined background gray and txt Color BLACK
+
+    /** Only Icon >> in pre-defined background gray and txt Color BLACK */
     public static void custom(Context context, String string, int icon, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape);
@@ -144,7 +149,7 @@ public class SweetToast {
         waitingSec(duration);
     }
 
-    // text, icon, txtColor, bgColor, duration >> all
+    /** text, icon, txtColor, bgColor, duration >> all */
     public static void custom(Context context, String string, int icon, int textColor, int backgroundColor, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(backgroundColor);
@@ -155,6 +160,9 @@ public class SweetToast {
         toast.show();
         waitingSec(duration);
     }
+    /** Ending custom */
+
+
 
     /** SupperCustom Toast For fully USER customized */
     public static Toast supperCustom(Context context, String string, int duration) {
