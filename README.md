@@ -1,17 +1,17 @@
 # SweetToast
 [![](https://jitpack.io/v/TheHasnatBD/SweetToast.svg)](https://jitpack.io/#TheHasnatBD/SweetToast)
  <div align="center">
- 	<img src="https://raw.githubusercontent.com/TheHasnatBD/SweetToast/master/files/logo.png" width="128">
+ 	<img src="https://raw.githubusercontent.com/TheHasnatBD/SweetToast/master/files/logo.png" width="130">
  </div>
  
 ### Screenshots of toasts
 | default | info | success | warning |
-:-----------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="files/dl.png"> | <img src="files/it.png"> | <img src="files/st.png"> | <img src="files/wt.png">
+:----------------------:|:----------------------:|:----------------------:|:----------------------:
+<img src="files/dl.png">|<img src="files/it.png">|<img src="files/st.png">|<img src="files/wt.png">
 
 | error | custom (only text) | custom (only icon) | custom (full) |
-:-----------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-<img src="files/et.png"> | <img src="files/ctt.png"> | <img src="files/cit.png"> | <img src="files/cft.png">
+:-----------------------:|:-------------------------:|:--------------------:|:-------------------------:
+<img src="files/et.png">|<img src="files/ctt.png">|<img src="files/cit.png">|<img src="files/cft.png">
  
 ## Setup
 **Step 1**<br />
@@ -30,14 +30,12 @@ Add the dependency
 ``` gradle
 dependencies {
     ...
-    implementation 'com.github.TheHasnatBD:SweetToast:1.0.0'
+    implementation 'com.github.TheHasnatBD:SweetToast:1.0.1'
 }
 ```
 
 ## Usage (Java)
 - [SweetToast Usage Example in Java](https://github.com/TheHasnatBD/SweetToast/blob/master/app/src/main/java/xyz/hasnat/sweettoastlibrary/MainActivity.java)
-<br />
-
 ### Android Default Toast
 To display default short Toast-
 ``` java
@@ -74,9 +72,12 @@ SweetToast.error(context, "YOUR STRING", duration);
 <br />
 
 ### Custom Toast
-(`duration` parameter is must be needed in `custom` method)<br />
+( `duration` parameter is must be needed in `custom` method)<br />
 (`textColor` takes a int value.
-<br />Example- ```java Color.WHITE``` or, ```java getResources().getColor(R.color.colorWhite) ``` or ```java Color.parseColor("#FFFFFF")```)<br />
+<br /> textColor example- `Color.WHITE` or, `getResources().getColor(R.color.colorWhite)` or `Color.parseColor("#FFFFFF")`)<br />
+
+<br />
+
 To display a partial-custom Toast-
 ``` java
 // Only custom Icon >> in pre-defined backgroundColor and textColor : LightGRAY and BLACK
@@ -106,7 +107,7 @@ SweetToast.custom(context, "YOUR STRING", drawableIcon, textColor, backgroundCol
  
 <br />
 
-(If you find any problems, please open an `issue` or make a `pull request`)
+(If you find any problem, please open an `issue` or make a `pull request`)
 
 <br />
 
