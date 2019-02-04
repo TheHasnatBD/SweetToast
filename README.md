@@ -5,11 +5,13 @@
  </div>
  
 ### Screenshots of toasts
-:----------------------------------:|:----------------------------------:|:-----------------------------------:|:-----------------------------------:
-<img src="files/dl.png" width="200">|<img src="files/it.png" width="200">|<img src="files/st.png" width="200"> |<img src="files/wt.png" width="200">
+| default | info | success | warning |
+:-----------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="files/dl.png"> | <img src="files/it.png"> | <img src="files/st.png"> | <img src="files/wt.png">
 
-:----------------------------------:|:----------------------------------:|:------------------------------------:|:-----------------------------------:
-<img src="files/et.png" width="200">|<img src="files/ctt.png" width="200">|<img src="files/cit.png" width="200">|<img src="files/cft.png" width="200">
+| error | custom (only text) | custom (only icon) | custom (full) |
+:-----------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+<img src="files/et.png"> | <img src="files/ctt.png"> | <img src="files/cit.png"> | <img src="files/cft.png">
  
 ## Setup
 **Step 1**<br />
