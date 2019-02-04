@@ -20,15 +20,25 @@ public class SweetToast {
 
     /** For Default Toast */
     // for default short toast
-    public static void shortToast(Context context, String string){
+    public static void defaultShort(Context context, String string){
         Toast.makeText(context, string, Toast.LENGTH_SHORT).show();
     }
     // for default long toast
-    public static void longToast(Context context, String string){
+    public static void defaultLong(Context context, String string){
         Toast.makeText(context, string, Toast.LENGTH_LONG).show();
     }
 
     /** For SUCCESS Toast */
+    public static void success(Context context, String string){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(R.drawable.round_shape_success);
+        setToastText(string, Color.WHITE);
+        setToastIcon(R.drawable.ic_done);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
+    }
     public static void success(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_success);
@@ -42,6 +52,16 @@ public class SweetToast {
     }
 
     /** For INFO Toast */
+    public static void info(Context context, String string){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(R.drawable.round_shape_info);
+        setToastText(string, Color.WHITE);
+        setToastIcon(R.drawable.ic_info);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
+    }
     public static void info(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_info);
@@ -54,6 +74,16 @@ public class SweetToast {
     }
 
     /** For WARNING Toast */
+    public static void warning(Context context, String string){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(R.drawable.round_shape_warning);
+        setToastText(string, Color.WHITE);
+        setToastIcon(R.drawable.ic_info);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
+    }
     public static void warning(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_warning);
@@ -66,6 +96,16 @@ public class SweetToast {
     }
 
     /** For ERROR Toast */
+    public static void error(Context context, String string){
+        myView = inflateMyLayout(context);
+        setBackgroundLayout(R.drawable.round_shape_error);
+        setToastText(string, Color.WHITE);
+        setToastIcon(R.drawable.ic_close);
+        toast = new Toast(context);
+        toast.setView(myView);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
+    }
     public static void error(Context context, String string, int duration){
         myView = inflateMyLayout(context);
         setBackgroundLayout(R.drawable.round_shape_error);
@@ -84,6 +124,8 @@ public class SweetToast {
         myView = inflateMyLayout(context);
         setBackgroundLayout(backgroundColor);
         setToastText(string, textColor);
+        ImageView imageView = setToastIcon(R.drawable.ic_done);
+        imageView.setVisibility(View.GONE); // FOR ONLY TEXT
         toast = new Toast(context);
         toast.setView(myView);
         toast.show();
@@ -133,15 +175,15 @@ public class SweetToast {
         LinearLayout layout = view.findViewById(R.id.toastLay);
         layout.setBackgroundResource(resId);
     }
-    private static TextView setToastText(String string, int textColor) {
+    private static void setToastText(String string, int textColor) {
         TextView toastTitle = view.findViewById(R.id.toastTitle);
         toastTitle.setText(string);
         toastTitle.setTextColor(textColor);
-        return toastTitle;
     }
-    private static void setToastIcon(int resId) {
+    private static ImageView setToastIcon(int resId) {
         ImageView toastIcon = view.findViewById(R.id.toastIcon);
         toastIcon.setImageResource(resId);
+        return toastIcon;
     }
 
     // time handling for toast duration

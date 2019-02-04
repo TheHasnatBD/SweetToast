@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void defaultShort(View view) {
-        SweetToast.shortToast(this, "Android Default Short Toast");
+        SweetToast.defaultShort(this, "Android Default Short Toast");
     }
 
     public void defaultLong(View view) {
-        SweetToast.longToast(this, "Android Default Long Toast");
+        SweetToast.defaultLong(this, "Android Default Long Toast");
     }
 
     public void info(View view) {

@@ -11,21 +11,26 @@
 
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"/>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
         <TextView
-            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SweetToast "
             android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#D58007"
             android:textSize="20sp"/>
         <TextView
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="1dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" demo"
@@ -140,7 +145,7 @@
 
             <TextView
                 android:layout_margin="10dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
