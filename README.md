@@ -85,12 +85,12 @@ SweetToast.custom(context, "YOUR STRING", drawableIcon, duration);
 ```
 To display a custom Text Toast without Icon-
 ``` java
-SweetToast.custom(context, "YOUR STRING", textColor, backgroundColor, duration);
+SweetToast.custom(context, "YOUR STRING", textColor, backgroundDrawable, duration);
 ```
 
 To display a FULLY custom Toast-
 ``` java
-SweetToast.custom(context, "YOUR STRING", drawableIcon, textColor, backgroundColor/customDrawable, duration);
+SweetToast.custom(context, "YOUR STRING", drawableIcon, textColor, backgroundDrawable, duration);
 ```
 
 <br />
@@ -107,7 +107,7 @@ SweetToast.custom(context, "YOUR STRING", drawableIcon, textColor, backgroundCol
  
 <br />
 
-(If you find any problem, please open an `issue` or make a `pull request`)
+(If you find/face any problem, please open an `issue` or make a `pull request`)
 
 <br />
 
