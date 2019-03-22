@@ -1,4 +1,4 @@
-package xyz.hasnat.sweettoastlibrary;
+package xyz.hasnat.sweettoast.app;
 
 import org.junit.Test;
 

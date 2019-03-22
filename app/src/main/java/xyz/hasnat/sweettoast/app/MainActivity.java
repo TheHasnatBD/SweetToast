@@ -1,10 +1,9 @@
-package xyz.hasnat.sweettoastlibrary;
+package xyz.hasnat.sweettoast.app;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import xyz.hasnat.sweettoast.SweetToast;
 

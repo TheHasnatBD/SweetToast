@@ -14,9 +14,8 @@
     <color name="colorDeepGray">#7E7E7E</color>
     <color name="colorYellow">#F3C642</color>
 
-    <color name="colorSuccess">#47AF4B</color>
-    <color name="colorInfo">#2098F7</color>
-    <color name="colorWarning">#F0B505</color>
-    <color name="colorError">#F1392A</color>
-
+    <color name="colorSuccess">#3AA33E</color>
+    <color name="colorInfo">#2089DD</color>
+    <color name="colorWarning">#BB9525</color>
+    <color name="colorError">#EB3829</color>
 </resources>

@@ -7,15 +7,15 @@
     android:gravity="center"
     android:id="@+id/toastLay"
     android:background="@color/colorLightGray"
-    android:padding="14dp"
+    android:padding="12dp"
     >
 
     <ImageView
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="8dp"
         android:id="@+id/toastIcon"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        />
+        android:layout_marginLeft="8dp" />
     <TextView
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorWhite"
         android:textSize="15sp"
+        android:text="iutuytyutyuhgf"
         />
 
 </LinearLayout>

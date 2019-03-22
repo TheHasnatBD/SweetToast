@@ -30,12 +30,12 @@ Add the dependency
 ``` gradle
 dependencies {
     ...
-    implementation 'com.github.TheHasnatBD:SweetToast:1.0.1'
+    implementation 'com.github.TheHasnatBD:SweetToast:1.0.2'
 }
 ```
 
-## Usage (Java)
-- [SweetToast Usage Example in Java](https://github.com/TheHasnatBD/SweetToast/blob/master/app/src/main/java/xyz/hasnat/sweettoastlibrary/MainActivity.java)
+## Usage
+- [SweetToast Usage Example](https://github.com/TheHasnatBD/SweetToast/blob/master/app/src/main/java/xyz/hasnat/sweettoastlibrary/MainActivity.java)
 ### Android Default Toast
 To display default short Toast-
 ``` java
@@ -112,6 +112,5 @@ SweetToast.custom(context, "YOUR STRING", drawableIcon, textColor, backgroundDra
 <br />
 
 <div align="center">
------:: Happy Coding ::-----
 </div>
  
